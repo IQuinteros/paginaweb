@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+@media (max-width: 680px) {
+  body {
+    width: 90%;
+  }
+  .buttoncontainer {
+    margin-left: 4% !important;
+  }
+}
+@font-face {
+  font-family: "GoogleSansBold";
+  src: url("./fonts/GoogleSans-Bold.ttf");
+}
+@font-face {
+  font-family: "GoogleSansRegular";
+  src: url("./fonts/GoogleSans-Regular.ttf");
+}
+/*
+?Estilo de los links
+*/
+a:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+/****Estilo HTML GENERAL*******/
+html {
+  width: auto;
+  background: linear-gradient(
+    to right,
+    rgb(85, 85, 87) 10%,
+    rgb(24, 24, 24) 90%
+  );
+}
+body {
+  background: transparent;
+}
+.container {
+  height: 300px;
+}
+/***************************************************************************************/
+/*logo*/
+.logo {
+  background: url("../fotos/Minvu2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.hint {
+  display: inline-block;
+  width: 140px;
+  text-align: center;
+  font-family: "GoogleSansRegular";
+}
+/*Titulo*/
+.maintitle {
+  width: 180px;
+  height: 180px;
+  font-size: 46px;
+  font-family: "GoogleSansBold";
+  /** font-family: "Courier New", Courier, monospace;*/
+  color: black;
+  margin-left: 43%;
+}
+/*Bordes contenedor de botones*/
+.buttoncontainer {
+  text-align: center;
+  width: 450px;
+  border: 0px solid black;
+  margin-left: 33%;
+}
+/********ESTILO BOTONES**********/
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.ingresar {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin: 2px;
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.forget {
+  font-size: 21px;
+  background-color: rgb(199, 56, 56);
+  border-radius: 25px;
+  outline: none;
+  width: 70%;
+}
+.inputs {
+  background-color: white;
+  border-radius: 0.25rem;
+  width: 70%;
+  outline: none;
+  font-size: 26px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in;
+}
+/****************************HEADER********************/
+.header {
+  width: 100%;
+  height: 80px;
+  display: block;
+}
+.inner_header {
+  width: 1000px;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.logo_container {
+  height: 100%;
+  display: table;
+  float: left;
+  padding-left: 10px;
+}
+.logo_container h1 {
+  color: white;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 28px;
+  font-weight: 200;
+  font-family: "GoogleSansRegular";
+}
+.logo_container h1 span {
+  font-size: 32px;
+  font-family: "GoogleSansBold";
+  font-weight: 800;
+}
+.navigation {
+  float: right;
+  height: 100%;
+}
+.navigation a {
+  height: 100%;
+  display: table;
+  float: left;
+  padding: 0px 20px;
+}
+.navigation a:last-child {
+  padding-right: 0px;
+}
+.navigation a li {
+  font-family: "GoogleSansRegular";
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  color: white;
+  font-size: 18px;
+}
+/****FOOOTERRRRRRRRRRR****/
+/* STYLES SPECIFIC TO FOOTER  */
+.footer {
+  width: 100%;
+  position: block;
+  vertical-align: middle;
+}
+.footer .col {
+  width: 190px;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0px 20px 20px 20px;
+}
+.footer .col h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color: black;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+.footer .col ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .col ul li {
+  color: black;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 5px 0px 5px 0px;
+  cursor: pointer;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+}
+.social ul li {
+  display: inline-block;
+  padding-right: 5px !important;
+}
+
+.footer .col ul li:hover {
+  color: #ffffff;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+}
+.clearfix {
+  clear: both;
+}
